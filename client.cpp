@@ -151,7 +151,7 @@ int main(int argc, char *argv[]){
 
         int response = chan.cread(rA, sizeof(filemsg) + fileName.length() + 1);
 
-        cout << *(__int64_t*)rA << endl;
+        //cout << *(__int64_t*)rA << endl;
 
         string writefile = "./received/patient" + file;
         ofstream oFile(writefile);
@@ -220,7 +220,7 @@ int main(int argc, char *argv[]){
         oFile.close();
 
         double timems = (end.tv_sec - start.tv_sec) + ((end.tv_usec - start.tv_usec) * 1e-6);
-        cout << "Time taken to copy patient1's info was: " << timems << endl;
+        cout << "Time taken to copy data was: " << timems << endl;
         
         /*
         struct timeval start, end;
